@@ -6,5 +6,3 @@ pandas
 python-dotenv
 opencv-python
 numpy
-random
-math
