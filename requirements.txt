@@ -1,6 +1,6 @@
 streamlit
 torch
-kmeans-py
+scikit-learn
 requests
 pandas
 python-dotenv
