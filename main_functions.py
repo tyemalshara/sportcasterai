@@ -264,11 +264,12 @@ import time
 def call_IkomiaAPI_playermask():
 
   ############################# Authentication ################################
+  IKOMIA_API = st.secrets["IKOMIA_API"]
   url = "https://scale.ikomia.ai/v1/projects/jwt/?endpoint=https://sepn8lvo8g.execute-api.eu-central-1.amazonaws.com/"
   payload = {}
   headers = {
     'Accept': 'application/json',
-    'Authorization': 'Token 191da0284750adc0400f12dd66d05fad7f0e71b525b5aa801ae1f2050879330a'
+    'Authorization': f'Token {IKOMIA_API}'
   }
   response = requests.request("GET", url, headers=headers, data=payload)
   JWT = response.json()['id_token']
@@ -325,13 +326,14 @@ def fetch_workflow_results_playermask(response, JWT):
 # second API call
 
 def call_IkomiaAPI():
-
+  
   ############################# Authentication ################################
+  IKOMIA_API = st.secrets["IKOMIA_API"]
   url = "https://scale.ikomia.ai/v1/projects/jwt/?endpoint=https://zk3ppi1ux4.execute-api.eu-central-1.amazonaws.com/"
   payload = {}
   headers = {
     'Accept': 'application/json',
-    'Authorization': 'Token 191da0284750adc0400f12dd66d05fad7f0e71b525b5aa801ae1f2050879330a'
+    'Authorization': f'Token {IKOMIA_API}'
   }
   response = requests.request("GET", url, headers=headers, data=payload)
   JWT = response.json()['id_token']
