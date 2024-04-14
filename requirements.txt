@@ -4,3 +4,9 @@ scikit-learn
 requests
 pandas
 python-dotenv
+os
+opencv-python
+numpy
+sklearn.cluster
+random
+math
